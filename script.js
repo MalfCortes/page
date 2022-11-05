@@ -1,8 +1,13 @@
-const root = document.querySelectorid("#root");
-const canvas = document.querySelector('#canvas');
-const ctx = canvas.getContext('2d');
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
-root.innerHTML = "Rodrigo"
+const obj = {x:20, y:20, t:100}
 
-ctx.fillStyle = 'green';
-ctx.fillrect(0,0, 50, 50);
+const mostra = () =>{
+    ctx.clearRect(0, 0, 300, 150);
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(obj.x, obj.y, obj.t, obj.t);
+    obj.x++;
+}
+
+setInterval(mostra, 100);
